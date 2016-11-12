@@ -1,0 +1,26 @@
+Autor: Sergio Cervilla Ortega  DNI: 14275233F
+Grupo: C(3)
+
+Para ejecutar: Escribir la orden make y despues ./practica2
+
+Objetos predefinidos para visualizar:
+    _C_: Cubo
+    _T_: Tetraedro
+    _R_: Objeto de Revolucion
+
+Lectura de modelos ply:
+    _U_: Ingresar nombre del fichero ply con su path(predeterminado: la carpeta de trabajo)
+    _O_: Ingresar nombre del fichero ply de objeto de revolución con su path(predeterminado: la carpeta de trabajo)
+
+Funciones extra para el objeto de revolucion:
+    _+_: Aumentar el numero de perfiles del objeto en una unidad.
+    _-_: Reducir el numero de perfiles del objeto en una unidad.
+    _1_: Mostrar tapa superior del objeto.
+    _2_: Mostrar tapa inferior del objeto.
+    _3_: Eliminar ambas tapas.
+
+Modos de visualizacion:
+    _L_: Modo lineas
+    _S_: Modo solido
+    _P_: Modo puntos
+    _A_: Modo ajedrez

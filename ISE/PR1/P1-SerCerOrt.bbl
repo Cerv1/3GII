@@ -1,0 +1,145 @@
+\begin{thebibliography}{10}
+
+\bibitem{dinahosting}
+dinahosting.com.
+\newblock \url{https://dinahosting.com/}, Consultado el 24 de Octubre de 2016.
+
+\bibitem{1and1}
+1and1.
+\newblock Servicio de hosting 1and1.
+\newblock \url{https://www.1and1.es/}, \newline Consultado el 24 de Octubre de
+  2016.
+
+\bibitem{MAAS}
+Canonical.
+\newblock Metal as a service.
+\newblock \url{http://maas.io/docs/en/}, \newline Consultado el 24 de Octubre
+  de 2016.
+
+\bibitem{Landscape}
+Canonical.
+\newblock Servicio de gestión landscape.
+\newblock
+  \url{https://landscape.canonical.com/static/doc/user-guide/ch01.html#idm45818554313920},
+  \newline Consultado el 24 de Octubre de 2016.
+
+\bibitem{centOS}
+CentOS.
+\newblock Centos.
+\newblock \url{https://wiki.centos.org/}, \newline Consultado el 24 de Octubre
+  de 2016.
+
+\bibitem{var}
+Debian.
+\newblock How to debian.
+\newblock
+  \url{http://www.debian.org/doc/manuals/securing-debian-howto/ch3.en.html#s3.2},
+  \newline Consultado el 24 de Octubre de 2016.
+
+\bibitem{NFS}
+Debian.
+\newblock Sistema de archivos nfs.
+\newblock
+  \url{https://debian-handbook.info/browse/es-ES/stable/sect.nfs-file-server.html},
+  \newline Consultado el 24 de Octubre de 2016.
+
+\bibitem{Fedora}
+Fedora.
+\newblock Fedora.
+\newblock \url{http://fedoraproject.org/wiki/Overview}, \newline Consultado el
+  24 de Octubre de 2016.
+
+\bibitem{grub}
+Grub.
+\newblock Como instalar grub.
+\newblock \url{https://www.gnu.org/software/grub/manual/grub.html}, \newline
+  Consultado el 24 de Octubre de 2016.
+
+\bibitem{figura143}
+Alex Hahn.
+\newblock Host-only en virtualbox.
+\newblock
+  \url{http://image.slidesharecdn.com/networkingbetweenhostandguestvmsinvirtualbox-120409045512-phpapp02/95/networking-between-host-and-guest-vms-in-virtualbox-5-728.jpg?cb=1333947479},
+  \newline Consultado el 24 de Octubre de 2016.
+
+\bibitem{RedHat}
+Red~Hat Inc.
+\newblock Red hat company.
+\newblock \url{https://www.redhat.com/en/about/company}, \newline Consultado el
+  24 de Octubre de 2016.
+
+\bibitem{RHEL}
+Red~Hat Inc.
+\newblock Red hat enterprise linux.
+\newblock
+  \url{https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux},
+  \newline Consultado el 24 de Octubre de 2016.
+
+\bibitem{LVM}
+LVM.
+\newblock Logical volume manager.
+\newblock \url{http://tldp.org/HOWTO/LVM-HOWTO/}, \newline Consultado el 24 de
+  Octubre de 2016.
+
+\bibitem{lvmlowcost}
+LVM.
+\newblock Lvm en servidores low cost.
+\newblock \url{http://tldp.org/HOWTO/LVM-HOWTO/benefitsoflvmsmall.html},
+  \newline Consultado el 24 de Octubre de 2016.
+
+\bibitem{microsoftmv}
+Microsoft.
+\newblock Comparación oficial de microsoft.
+\newblock
+  \url{https://www.microsoft.com/es-es/server-cloud/products/windows-server-2012-r2/comparison.aspx},
+  \newline Consultado el 24 de Octubre de 2016.
+
+\bibitem{hyperV}
+Microsoft.
+\newblock Detalles técnicos de la virtualización de red de hyper-v.
+\newblock
+  \url{https://msdn.microsoft.com/es-es/library/jj134174(v=ws.11).aspx},
+  \newline Consultado el 24 de Octubre de 2016.
+
+\bibitem{wnano}
+Microsoft.
+\newblock Nano server 2016.
+\newblock
+  \url{https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-nano-server},
+  \newline Consultado el 24 de Octubre de 2016.
+
+\bibitem{windows_std_data}
+Microsoft.
+\newblock Standard vs datacenter.
+\newblock
+  \url{https://www.microsoft.com/es-es/server-cloud/products/windows-server-2012-r2/purchasing.aspx},
+  \newline Consultado el 24 de Octubre de 2016.
+
+\bibitem{figura141}
+networklab.
+\newblock Red nat en virtualbox.
+\newblock \url{http://www.nwlab.net/tutorials/virtualbox/virtualbox-nat.png},
+  \newline Consultado el 24 de Octubre de 2016.
+
+\bibitem{mitraid}
+Massachusetts~Institute of~Technology.
+\newblock Raid software vs raid hardware.
+\newblock
+  \url{http://web.mit.edu/rhel-doc/3/rhel-sag-en-3/s1-raid-approaches.html},
+  \newline Consultado el 24 de Octubre de 2016.
+
+\bibitem{seagatelevels}
+Seagate.
+\newblock Almacenamiento en niveles.
+\newblock
+  \url{http://www.seagate.com/es/es/tech-insights/tiered-storage-enabling-and-advancing-cloud-capabilities-master-ti/},
+  \newline Consultado el 24 de Octubre de 2016.
+
+\bibitem{figura142}
+thegeeky.space.
+\newblock Bridge en virtualbox.
+\newblock
+  \url{http://2.bp.blogspot.com/-EFtknEtf6XE/VYZIfARwysI/AAAAAAAAAyY/19nJPXojaFs/s1600/How%2Bto%2Brun%2BBridged%2BVirtual%2BNetwork%2Bon%2BCentOS%252CKali%2BLinux%252C%2BWindows%2Bin%2BVirtualBox.%2BPractical%2Bexample2.png},
+  \newline Consultado el 24 de Octubre de 2016.
+
+\end{thebibliography}

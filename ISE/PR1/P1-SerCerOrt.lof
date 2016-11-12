@@ -1,0 +1,10 @@
+\select@language {spanish}
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Resultado de ejecutar \textbf {lsblk} en mi terminal despu\IeC {\'e}s de montar el sistema. }}{9}{figure.1}
+\contentsline {figure}{\numberline {13.1}{\ignorespaces Primer paso RAID Windows. }}{10}{figure.1}
+\contentsline {figure}{\numberline {13.2}{\ignorespaces Segundo paso RAID Windows. }}{11}{figure.2}
+\contentsline {figure}{\numberline {13.3}{\ignorespaces Tercer paso RAID Windows. }}{11}{figure.3}
+\contentsline {figure}{\numberline {13.4}{\ignorespaces Cuarto paso RAID Windows. }}{12}{figure.4}
+\contentsline {figure}{\numberline {13.5}{\ignorespaces RAID en Windows operativo. }}{12}{figure.5}
+\contentsline {figure}{\numberline {14.1}{\ignorespaces Configuraci\IeC {\'o}n NAT en VirtualBox.\cite {figura141} }}{13}{figure.1}
+\contentsline {figure}{\numberline {14.2}{\ignorespaces Configuraci\IeC {\'o}n Bridge en VirtualBox.\cite {figura142} }}{14}{figure.2}
+\contentsline {figure}{\numberline {14.3}{\ignorespaces Configuraci\IeC {\'o}n Host-only en VirtualBox.\cite {figura143} }}{14}{figure.3}

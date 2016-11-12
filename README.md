@@ -1,2 +1,8 @@
-# 3GII
-Trabajos y asignaturas de 3º en el Grado de Ingeniería Informática en la ETSIIT. La especialidad TIC irá en un repositorio separado.
+**Proyectos relacionados con el 3º curso de Ingeniería Informática en la ETSIIT.**
+
+* [Informática Gráfica](/IG)
+* [Ingeniería de Servidores](/ISE)
+
+
+
+Author: Sergio Cervilla Ortega

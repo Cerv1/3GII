@@ -1,0 +1,14 @@
+\BOOKMARK [1][-]{section.1}{\277Qu\351 modos y/o tipos de virtualizaci\363n existen?}{}% 1
+\BOOKMARK [1][-]{section.2}{Muestre los precios y caracter\355sticas de varios proveedores de VPS \(Virtual Private Server\) y compare con el precio de servidores dedicados \(administrados y no administrados\). Comente las diferencias.}{}% 2
+\BOOKMARK [1][-]{section.3}{a\) Enumere y explique brevemente al menos tres de las innovaciones en Windows Server 2016 y 2012 R2 respecto a 2008 R2.b\)\277Qu\351 es Windows Server 2016 nano?}{}% 3
+\BOOKMARK [1][-]{section.4}{\277Qu\351 son los productos MAAS y Landscape ofrecidos por Canonical \(la empresa que desarrolla Ubuntu\)?}{}% 4
+\BOOKMARK [1][-]{section.5}{\277Qu\351 relaci\363n tiene esta distribuci\363n \(CentOS\) con Red Hat y con el proyecto Fedora?}{}% 5
+\BOOKMARK [1][-]{section.6}{\277Qu\351 diferencias hay entre RAID mediante software y mediante hardware?}{}% 6
+\BOOKMARK [1][-]{section.7}{a\) \277Qu\351 es LVM? b\) \277Qu\351 ventaja tiene para un servidor de gama baja? c\) Si va a tener un servidor web, \277le dar\355a un tama\361o grande o peque\361o a /var?}{}% 7
+\BOOKMARK [1][-]{section.8}{\277Debemos cifrar tambi\351n el volumen que contiene el espacio para swap? \277y el volumen en el que montaremos /boot?}{}% 8
+\BOOKMARK [1][-]{section.9}{a\) Imagine que tiene un disco h\355brido con tecnolog\355a SSD. \277Qu\351 puntos de montaje ubicar\355a en este? b\) Justifique qu\351 tipo de sistema de archivos usar\355a para tener un servidor de streaming.}{}% 9
+\BOOKMARK [1][-]{section.10}{Muestre c\363mo ha quedado el disco particionado una vez el sistema est\341 instalado y ha iniciado sesi\363n.}{}% 10
+\BOOKMARK [1][-]{section.11}{a\) \277C\363mo ha hecho el disco 2 ``arrancable''? b\) \277Qu\351 hace el comando grub-install?}{}% 11
+\BOOKMARK [1][-]{section.12}{\277Qu\351 diferencia hay entre Standard y Datacenter?}{}% 12
+\BOOKMARK [1][-]{section.13}{Contin\372e usted con el proceso de definici\363n de RAID1 para los dos discos de 50MiB que ha creado. Muestre el proceso con capturas de pantalla.}{}% 13
+\BOOKMARK [1][-]{section.14}{Explique brevemente qu\351 diferencias hay entre los tres tipos de conexi\363n que permite el VMSW para las Mvs: NAT, Host-only y Bridge.}{}% 14

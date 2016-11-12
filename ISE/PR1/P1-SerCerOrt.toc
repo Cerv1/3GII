@@ -1,0 +1,15 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}\IeC {\textquestiondown }Qu\IeC {\'e} modos y/o tipos de virtualizaci\IeC {\'o}n existen?}{4}{section.1}
+\contentsline {section}{\numberline {2}Muestre los precios y caracter\IeC {\'\i }sticas de varios proveedores de VPS (Virtual Private Server) y compare con el precio de servidores dedicados (administrados y no administrados). Comente las diferencias.}{4}{section.2}
+\contentsline {section}{\numberline {3}a) Enumere y explique brevemente al menos tres de las innovaciones en Windows Server 2016 y 2012 R2 respecto a 2008 R2.\newline b)\IeC {\textquestiondown }Qu\IeC {\'e} es Windows Server 2016 nano?}{5}{section.3}
+\contentsline {section}{\numberline {4}\IeC {\textquestiondown }Qu\IeC {\'e} son los productos MAAS y Landscape ofrecidos por Canonical (la empresa que desarrolla Ubuntu)?}{6}{section.4}
+\contentsline {section}{\numberline {5}\IeC {\textquestiondown }Qu\IeC {\'e} relaci\IeC {\'o}n tiene esta distribuci\IeC {\'o}n (CentOS) con Red Hat y con el proyecto Fedora?}{6}{section.5}
+\contentsline {section}{\numberline {6}\IeC {\textquestiondown }Qu\IeC {\'e} diferencias hay entre RAID mediante software y mediante hardware?}{7}{section.6}
+\contentsline {section}{\numberline {7}a) \IeC {\textquestiondown }Qu\IeC {\'e} es LVM? \newline b) \IeC {\textquestiondown }Qu\IeC {\'e} ventaja tiene para un servidor de gama baja? \newline c) Si va a tener un servidor web, \IeC {\textquestiondown }le dar\IeC {\'\i }a un tama\IeC {\~n}o grande o peque\IeC {\~n}o a /var?}{7}{section.7}
+\contentsline {section}{\numberline {8}\IeC {\textquestiondown }Debemos cifrar tambi\IeC {\'e}n el volumen que contiene el espacio para swap? \IeC {\textquestiondown }y el volumen en el que montaremos /boot?}{8}{section.8}
+\contentsline {section}{\numberline {9}a) Imagine que tiene un disco h\IeC {\'\i }brido con tecnolog\IeC {\'\i }a SSD. \IeC {\textquestiondown }Qu\IeC {\'e} puntos de montaje ubicar\IeC {\'\i }a en este? \newline b) Justifique qu\IeC {\'e} tipo de sistema de archivos usar\IeC {\'\i }a para tener un servidor de streaming.}{8}{section.9}
+\contentsline {section}{\numberline {10}Muestre c\IeC {\'o}mo ha quedado el disco particionado una vez el sistema est\IeC {\'a} instalado y ha iniciado sesi\IeC {\'o}n.}{9}{section.10}
+\contentsline {section}{\numberline {11}a) \IeC {\textquestiondown }C\IeC {\'o}mo ha hecho el disco 2 ``arrancable''? \newline b) \IeC {\textquestiondown }Qu\IeC {\'e} hace el comando grub-install?}{9}{section.11}
+\contentsline {section}{\numberline {12}\IeC {\textquestiondown }Qu\IeC {\'e} diferencia hay entre Standard y Datacenter?}{10}{section.12}
+\contentsline {section}{\numberline {13}Contin\IeC {\'u}e usted con el proceso de definici\IeC {\'o}n de RAID1 para los dos discos de 50MiB que ha creado. Muestre el proceso con capturas de pantalla.}{10}{section.13}
+\contentsline {section}{\numberline {14}Explique brevemente qu\IeC {\'e} diferencias hay entre los tres tipos de conexi\IeC {\'o}n que permite el VMSW para las Mvs: NAT, Host-only y Bridge.}{13}{section.14}

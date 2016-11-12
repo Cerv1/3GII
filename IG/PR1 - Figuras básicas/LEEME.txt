@@ -1,0 +1,14 @@
+Autor: Sergio Cervilla Ortega  DNI: 14275233F
+Grupo: C(3)
+
+Para ejecutar: Escribir la orden make y después ./practica1
+
+Modos de visualización:
+T -> Cubo sólido
+Y -> Cubo alambre
+U -> Cubo puntos
+G -> Tetraedro sólido
+H -> Tetraedro alambre
+J -> Tetraedro puntos
+C -> Cubo modo ajedrez
+V -> Tetraedro modo ajedrez

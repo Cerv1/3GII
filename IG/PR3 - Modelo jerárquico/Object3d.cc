@@ -71,7 +71,7 @@ float Object3d::module(Point point){
 
 void Object3d::scale(){
   float scale = getSizeBox();
-  glScalef(260.0f/scale,260.0f/scale,260.0f/scale);
+  glScalef(900.0f/scale,900.0f/scale,900.0f/scale);
 }
 
 void Object3d::translate(){
@@ -85,6 +85,7 @@ void Object3d::draw(unsigned char draw_modde, unsigned char object){
     // translate();
 
     // glEnable(GL_CULL_FACE);
+
     glEnableClientState(GL_VERTEX_ARRAY);
     glEnableClientState(GL_COLOR_ARRAY);
 

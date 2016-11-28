@@ -26,6 +26,7 @@ bool tieneTapaInf=false;
 bool tapasQuitadas=false;
 
 Ply *objectPly;
+Ply *tommygun;
 Cube *cube;
 Tetrahedron *tetrahedron;
 RevolutionObject *revo;
@@ -43,7 +44,7 @@ bool end_vertical_movement=false;
 bool end_vertical_displacement=false;
 bool end_claw_movement=false;
 
-unsigned char shape='T';
+unsigned char shape='1';
 unsigned char mode='S';
 
 // variables que definen la posicion de la camara en coordenadas polares

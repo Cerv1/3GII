@@ -9,7 +9,6 @@ Mechanic::Mechanic(){
   base->changeSides(10);
   base->generateUpperCap();
   base->generateLowerCap();
-  _file_ply reader;
   maquina = new Ply();
   maquina->readPLY("machine.ply");
 }

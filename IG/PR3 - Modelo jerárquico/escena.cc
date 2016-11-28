@@ -31,12 +31,18 @@ void Escena::inicializar(int UI_window_width,int UI_window_height) {
   objectPly = new Ply();
   mecha = new Mechanic();
 
+  tommygun = new Ply();
+  tommygun->scale();
+  tommygun->translate();
+  tommygun->readPLY("tommygun.ply");
+
   // vector<float> perfil={3,4,0,	6,0,0,	2,-3,0,		3,-6,0};
   // vector<float> perfil={2,4,0,2,-4,0};
 
-
   vector<float> perfil={1,3,0,2,3,0,2.5,2,0,5,1,0,3.5,0,0};
   revo = new RevolutionObject(perfil,30);
+  revo->generateUpperCap();
+  revo->generateLowerCap();
 }
 
 
@@ -45,8 +51,18 @@ void Escena::inicializar(int UI_window_width,int UI_window_height) {
 //***************************************************************************
 void Escena::draw_objects(unsigned char shape) {
     switch(shape){
-        case 'T':
+        case '1':
             mecha->draw(shape,mode,claw_rotation,claw_movement,horizontal_movement, vertical_displacement,vertical_movement);
+            break;
+        case '2':
+            revo->scale();
+            revo->translate();
+            revo->draw(shape,mode);
+            break;
+        case '3':
+            glScalef(250.0f,250.0f,250.0f);
+            tommygun->translate();
+            tommygun->draw(shape,mode);
             break;
         case 'C':
             if(horizontal_movement<295)
@@ -126,7 +142,6 @@ void Escena::animate(){
         claw_movement-=3;
         if(claw_movement<-38) end_claw_movement=false;
     }
-
     claw_rotation+=5;
 }
 
@@ -143,6 +158,11 @@ int Escena::teclaPulsada(unsigned char Tecla1,int x,int y) {
     else if(toupper(Tecla1) == 'S' || toupper(Tecla1) == 'L' || toupper(Tecla1) == 'P' || toupper(Tecla1) == 'A' ){
         mode=toupper(Tecla1);
         return 0;
+    }
+
+    if(Tecla1 == '1' || Tecla1 == '2' || Tecla1 == '3'){
+        shape=Tecla1;
+        draw_objects(Tecla1);
     }
     else if(Tecla1 == 'Z' || Tecla1 == 'z')
         draw_objects(Tecla1);

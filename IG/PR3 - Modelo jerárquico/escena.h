@@ -31,10 +31,18 @@ Tetrahedron *tetrahedron;
 RevolutionObject *revo;
 RevolutionObject *revoPly;
 Mechanic *mecha;
-int nPos=1;
-int nGrip=0;
-int desp=0;
-float nVer=1;
+
+int claw_rotation=1;
+int claw_movement=0;
+int horizontal_movement=0;
+int vertical_movement=0;
+float vertical_displacement=1;
+
+bool end_horizontal_movement=false;
+bool end_vertical_movement=false;
+bool end_vertical_displacement=false;
+bool end_claw_movement=false;
+
 unsigned char shape='T';
 unsigned char mode='S';
 
@@ -51,6 +59,7 @@ private:
 	void draw_axis();
 	void draw_objects(unsigned char shape);
 
+
 //Transformaci�n de c�mara
 	void change_projection();
 	void change_observer();
@@ -63,6 +72,7 @@ public:
 
 	// Dibujar
 	void dibujar() ;
+	void animate();
 
 	// Interacci�n con la escena
 	int teclaPulsada(unsigned char Tecla1,int x,int y) ;

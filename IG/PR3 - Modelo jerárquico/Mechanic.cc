@@ -11,14 +11,14 @@ Mechanic::Mechanic(){
   base->generateLowerCap();
   _file_ply reader;
   maquina = new Ply();
-  maquina->readPLY("f16.ply");
+  maquina->readPLY("machine.ply");
 }
 
-void Mechanic::draw(unsigned char shape, unsigned char mode, int pos_via, int pos_grip, int desp, float ver){
+void Mechanic::draw(unsigned char shape, unsigned char mode, int pos_via, int pos_grip, int desp, float ver, int vertical_movement){
   glPushMatrix();
-    glTranslatef(0,20,0);
+    glTranslatef(0,200,0);
     glPushMatrix();
-      rail_draw(shape, mode, pos_via, pos_grip,desp,ver);
+      rail_draw(shape, mode, pos_via, pos_grip,desp,ver,vertical_movement);
     glPopMatrix();
     base_draw(shape,mode);
   glPopMatrix();
@@ -34,10 +34,10 @@ void Mechanic::base_draw(unsigned char shape, unsigned char mode){
     maquina->draw(shape,mode);
 }
 
-void Mechanic::rail_draw(unsigned char shape, unsigned char mode, int pos_via, int pos_grip, int desp, float ver){
+void Mechanic::rail_draw(unsigned char shape, unsigned char mode, int pos_via, int pos_grip, int desp, float ver, int vertical_movement){
   glPushMatrix();
     glTranslatef(0,85,0);
-    connector_draw(shape,mode,pos_via,pos_grip,desp,ver);
+    connector_draw(shape,mode,pos_via,pos_grip,desp,ver,vertical_movement);
   glPopMatrix();
 }
 
@@ -61,6 +61,7 @@ void Mechanic::claw_draw(unsigned char shape, unsigned char mode, int pos_via, i
 void Mechanic::gripper_draw(unsigned char shape, unsigned char mode, int pos_grip){
   glPushMatrix();
     glRotatef(pos_grip,0,0,1);
+
     glPushMatrix();
         glTranslatef(-49,-45.5,0);
         glRotatef(pos_grip+10,0,0,1);
@@ -76,15 +77,16 @@ void Mechanic::gripper_draw(unsigned char shape, unsigned char mode, int pos_gri
     glPopMatrix();
 }
 
-void Mechanic::connector_draw(unsigned char shape, unsigned char mode, int pos_via, int pos_grip, int des,float ver){
+void Mechanic::connector_draw(unsigned char shape, unsigned char mode, int pos_via, int pos_grip, int des,float ver, int vertical_movement){
     int longitud=100;
-    cout << ver << endl;
     glPushMatrix();
-        glTranslatef(des,0,0);
+        glTranslatef(des,0,vertical_movement);
+
         glPushMatrix();
             glTranslatef(0,-(ver-1)*longitud,0);
             claw_draw(shape,mode,pos_grip,pos_via);
         glPopMatrix();
+
         glTranslatef(0,longitud,0);
         glScalef(1,ver,1);
         glTranslatef(0,-longitud/2,0);

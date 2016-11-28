@@ -46,37 +46,88 @@ void Escena::inicializar(int UI_window_width,int UI_window_height) {
 void Escena::draw_objects(unsigned char shape) {
     switch(shape){
         case 'T':
-            mecha->draw(shape,mode,nPos,nGrip,desp, nVer);
+            mecha->draw(shape,mode,claw_rotation,claw_movement,horizontal_movement, vertical_displacement,vertical_movement);
             break;
         case 'C':
-            desp+=8;
+            if(horizontal_movement<295)
+                horizontal_movement+=8;
             break;
         case 'c':
-            desp-=8;
+            if(horizontal_movement>-275)
+                horizontal_movement-=8;
             break;
         case 'X':
-            if(nVer<3.8)
-                nVer+=0.1;
+            if(vertical_displacement<3.8)
+                vertical_displacement+=0.1;
             break;
         case 'x':
-            if(nVer>0.6)
-                nVer+=-0.1;
+            if(vertical_displacement>0.6)
+                vertical_displacement+=-0.1;
             break;
         case 'Z':
-            if(nGrip<10)
-                nGrip+=3;
+            if(claw_movement<10)
+                claw_movement+=3;
             break;
         case 'z':
-            if(nGrip>-38)
-                nGrip-=3;
+            if(claw_movement>-38)
+                claw_movement-=3;
             break;
         case 'V':
-            nPos+=8;
+            claw_rotation+=8;
             break;
         case 'v':
-            nPos-=8;
+            claw_rotation-=8;
+            break;
+        case 'D':
+            if(vertical_movement<104)
+                vertical_movement+=8;
+            break;
+        case 'd':
+            if(vertical_movement>-430)
+                vertical_movement-=8;
             break;
       }
+}
+
+void Escena::animate(){
+
+    if(horizontal_movement<295 && !end_horizontal_movement){
+        horizontal_movement+=6;
+        if(horizontal_movement>295) end_horizontal_movement=true;
+    }
+    else if(horizontal_movement>-275 && end_horizontal_movement){
+        horizontal_movement-=6;
+        if(horizontal_movement<-275) end_horizontal_movement=false;
+    }
+
+    if(vertical_movement<104 && !end_vertical_movement){
+        vertical_movement+=6;
+        if(vertical_movement>104) end_vertical_movement=true;
+    }
+    else if(vertical_movement>-430 && end_vertical_movement){
+        vertical_movement-=6;
+        if(vertical_movement<-430) end_vertical_movement=false;
+    }
+
+    if(vertical_displacement<3.8 && !end_vertical_displacement){
+        vertical_displacement+=0.1;
+        if(vertical_displacement>3.8) end_vertical_displacement=true;
+    }
+    else if(vertical_displacement>0.6 && end_vertical_movement){
+        vertical_displacement-=0.1;
+        if(vertical_displacement<0.6) end_vertical_displacement=false;
+    }
+
+    if(claw_movement<10 && !end_claw_movement){
+        claw_movement+=3;
+        if(claw_movement>10) end_claw_movement=true;
+    }
+    else if(claw_movement>-38 && end_claw_movement){
+        claw_movement-=3;
+        if(claw_movement<-38) end_claw_movement=false;
+    }
+
+    claw_rotation+=5;
 }
 
 void Escena::dibujar() {
@@ -93,23 +144,18 @@ int Escena::teclaPulsada(unsigned char Tecla1,int x,int y) {
         mode=toupper(Tecla1);
         return 0;
     }
-    else if(Tecla1 == 'Z')
+    else if(Tecla1 == 'Z' || Tecla1 == 'z')
         draw_objects(Tecla1);
-    else if(Tecla1 == 'z')
+    else if(Tecla1 == 'X' || Tecla1 == 'x')
         draw_objects(Tecla1);
-    else if(Tecla1 == 'X')
+    else if(Tecla1 == 'C' || Tecla1 =='c')
         draw_objects(Tecla1);
-    else if(Tecla1 == 'x')
+    else if(Tecla1 == 'V' || Tecla1 == 'v')
         draw_objects(Tecla1);
-    else if(Tecla1 == 'C')
-        draw_objects(Tecla1);
-    else if(Tecla1 == 'c')
-        draw_objects(Tecla1);
-    else if(Tecla1 == 'V')
-        draw_objects(Tecla1);
-    else if(Tecla1 == 'v')
+     else if(Tecla1 == 'D' || Tecla1 == 'd')
         draw_objects(Tecla1);
     return 0;
+
 }
     //   if(toupper(Tecla1)=='U'){
     //     string name;

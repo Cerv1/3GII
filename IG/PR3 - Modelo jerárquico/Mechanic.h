@@ -20,12 +20,12 @@ class Mechanic : public Object3d{
     Ply *maquina;
   public:
     Mechanic();
-    void draw(unsigned char shape, unsigned char mode, int pos_via,int pos_grip, int desp, float ver);
+    void draw(unsigned char shape, unsigned char mode, int pos_via,int pos_grip, int desp, float ver,int vertical_displacement);
     void gripper_draw(unsigned char shape, unsigned char mode, int pos_grip);
     void claw_draw(unsigned char shape, unsigned char mode, int pos_grip, int pos_via);
-    void connector_draw(unsigned char shape, unsigned char mode, int pos_via, int pos_grip, int desp, float ver);
+    void connector_draw(unsigned char shape, unsigned char mode, int pos_via, int pos_grip, int desp, float ver, int vertical_displacement);
     void base_draw(unsigned char shape, unsigned char mode);
-    void rail_draw(unsigned char shape, unsigned char mode, int pos_via,int pos_grip, int desp, float ver);
+    void rail_draw(unsigned char shape, unsigned char mode, int pos_via,int pos_grip, int desp, float ver,int vertical_displacement);
 };
 
 #endif

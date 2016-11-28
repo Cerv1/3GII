@@ -1,6 +1,6 @@
 Informatica Gráfica
 ====================
-2º Grado en Ingeniería Informática 2015/2016
+3º Grado en Ingeniería Informática 2016/2017
 --------------------------------------------
 
 ### Prácticas

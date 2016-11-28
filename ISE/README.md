@@ -6,3 +6,5 @@ Ingeniería de Servidores
 ### Prácticas
 
 * [Memoria práctica 1](PR1): Instalación de Sistemas Operativos para servidores y configuración de RAID1.
+
+* [Memoria práctica 2](PR2): Instalación y configuración de servicios.

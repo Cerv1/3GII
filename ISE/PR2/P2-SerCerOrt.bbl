@@ -1,0 +1,133 @@
+\begin{thebibliography}{10}
+
+\bibitem{apache}
+Apache.
+\newblock Installing apache2 on centos.
+\newblock
+  \url{https://www.centos.org/docs/5/html/Cluster_Administration/s1-apache-inshttpd-CA.html},
+  \newline Consultado el 22 de Noviembre de 2016.
+
+\bibitem{yum-proxy-conf}
+CentOS.
+\newblock Using yum with a proxy server.
+\newblock
+  \url{https://www.centos.org/docs/5/html/yum/sn-yum-proxy-server.html},
+  \newline Consultado el 17 de Noviembre de 2016.
+
+\bibitem{direct-admin}
+DirectAdmin.
+\newblock Direct admin - web control panel.
+\newblock \url{https://www.directadmin.com/}, \newline Consultado el 21 de
+  Noviembre de 2016.
+
+\bibitem{man-yum}
+Red Hat.
+\newblock Yum - linux man page.
+\newblock \url{https://linux.die.net/man/8/yum}, \newline Consultado el 17 de
+  Noviembre de 2016.
+
+\bibitem{apt-proxy-conf}
+Linux.
+\newblock Using apt with a proxy server.
+\newblock \url{https://linux.die.net/man/5/apt.conf}, \newline Consultado el 17
+  de Noviembre de 2016.
+
+\bibitem{apt-cache}
+Linux man page.
+\newblock apt-cache - linux man page.
+\newblock \url{https://linux.die.net/man/8/apt-cache}, \newline Consultado el
+  17 de Noviembre de 2016.
+
+\bibitem{apt-get}
+Linux man page.
+\newblock apt-get - linux man page.
+\newblock \url{https://linux.die.net/man/8/apt-get}, \newline Consultado el 17
+  de Noviembre de 2016.
+
+\bibitem{ssh}
+Linux man page.
+\newblock ssh - linux man page.
+\newblock \url{http://linuxcommand.org/man_pages/ssh1.html}, \newline
+  Consultado el 17 de Noviembre de 2016.
+
+\bibitem{telnet}
+Linux man page.
+\newblock telnet - linux man page.
+\newblock \url{https://linux.die.net/man/1/telnet}, \newline Consultado el 17
+  de Noviembre de 2016.
+
+\bibitem{diff}
+Linux man page.
+\newblock diff - linux man page.
+\newblock \url{http://man7.org/linux/man-pages/man1/diff.1.html}, \newline
+  Consultado el 22 de Noviembre de 2016.
+
+\bibitem{patch}
+Linux man page.
+\newblock patch - linux man page.
+\newblock \url{https://linux.die.net/man/1/patch}, \newline Consultado el 22 de
+  Noviembre de 2016.
+
+\bibitem{find}
+Linux man page.
+\newblock find - linux man page.
+\newblock \url{https://linux.die.net/man/1/find}, \newline Consultado el 23 de
+  Noviembre de 2016.
+
+\bibitem{grep}
+Linux man page.
+\newblock grep - linux man page.
+\newblock \url{https://linux.die.net/man/1/grep}, \newline Consultado el 23 de
+  Noviembre de 2016.
+
+\bibitem{ps}
+Linux man page.
+\newblock ps - linux man page.
+\newblock \url{https://linux.die.net/man/1/ps}, \newline Consultado el 23 de
+  Noviembre de 2016.
+
+\bibitem{sed}
+Linux man page.
+\newblock sed - linux man page.
+\newblock \url{https://linux.die.net/man/1/sed}, \newline Consultado el 23 de
+  Noviembre de 2016.
+
+\bibitem{powershell}
+Microsoft.
+\newblock Killing a proccess with powershell.
+\newblock \url{https://technet.microsoft.com/en-us/library/ee177004.aspx},
+  \newline Consultado el 22 de Noviembre de 2016.
+
+\bibitem{mysql}
+MySQL.
+\newblock Installing mysql on centos.
+\newblock
+  \url{https://dev.mysql.com/doc/mysql-repo-excerpt/5.6/en/linux-installation-yum-repo.html#yum-install-components},
+  \newline Consultado el 17 de Noviembre de 2016.
+
+\bibitem{phpmyadmin}
+phpMyAdmin.
+\newblock Installing phpmyadmin on ubuntu.
+\newblock \url{https://help.ubuntu.com/lts/serverguide/phpmyadmin.html},
+  \newline Consultado el 22 de Noviembre de 2016.
+
+\bibitem{yum-add-repo}
+RedHat.
+\newblock Adding a yum repository.
+\newblock
+  \url{https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/sec-Managing_Yum_Repositories.html},
+  \newline Consultado el 17 de Noviembre de 2016.
+
+\bibitem{ufw}
+Ubuntu.
+\newblock Uncomplicated firewall.
+\newblock \url{https://wiki.ubuntu.com/UncomplicatedFirewall}, \newline
+  Consultado el 17 de Noviembre de 2016.
+
+\bibitem{webmin}
+Webmin.
+\newblock Installing webmin.
+\newblock \url{http://www.webmin.com/deb.html}, \newline Consultado el 22 de
+  Noviembre de 2016.
+
+\end{thebibliography}

@@ -1,26 +1,27 @@
 Autor: Sergio Cervilla Ortega  DNI: 14275233F
 Grupo: C(3)
 
-Para ejecutar: Escribir la orden make y despues ./practica2
+Para ejecutar: Escribir la orden make y despues ./practica3
 
 Objetos predefinidos para visualizar:
-    _C_: Cubo
-    _T_: Tetraedro
-    _R_: Objeto de Revolucion
-
-Lectura de modelos ply:
-    _U_: Ingresar nombre del fichero ply con su path(predeterminado: la carpeta de trabajo)
-    _O_: Ingresar nombre del fichero ply de objeto de revolución con su path(predeterminado: la carpeta de trabajo)
-
-Funciones extra para el objeto de revolucion:
-    _+_: Aumentar el numero de perfiles del objeto en una unidad.
-    _-_: Reducir el numero de perfiles del objeto en una unidad.
-    _1_: Mostrar tapa superior del objeto.
-    _2_: Mostrar tapa inferior del objeto.
-    _3_: Eliminar ambas tapas.
+    _1_: Modelo jerárquico
+    _2_: Objeto de Revolucion
+    _3_: Objeto ply
 
 Modos de visualizacion:
     _L_: Modo lineas
     _S_: Modo solido
     _P_: Modo puntos
     _A_: Modo ajedrez
+
+Controles para el objeto jerárquico:
+    _-_: Activar/Desactivar animación
+    -> Animación activada:
+      _n_: Aumentar/Disminuir velocidad global
+      _b_: Aumentar/Disminuir velocidad de rotación del gancho
+    -> Animación desactivada:
+      _c/C_: Desplazamiento izquierda/derecha.
+      _d/D_: Desplazamiento delante/atrás.
+      _z/Z_: Abrir/Cerrar garras
+      _x/X_: Bajar/Subir gancho
+      __v__: Rotación del gancho

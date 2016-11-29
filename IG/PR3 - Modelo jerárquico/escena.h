@@ -4,9 +4,7 @@
 #include "ejes.h"
 #include "Object3d.h"
 #include "Ply.h"
-#include "Cube.h"
 #include "Mechanic.h"
-#include "Tetrahedron.h"
 #include "RevolutionObject.h"
 #include "file_ply_stl.h"
 
@@ -27,8 +25,6 @@ bool tapasQuitadas=false;
 
 Ply *objectPly;
 Ply *tommygun;
-Cube *cube;
-Tetrahedron *tetrahedron;
 RevolutionObject *revo;
 RevolutionObject *revoPly;
 Mechanic *mecha;
@@ -39,6 +35,12 @@ int horizontal_movement=0;
 int vertical_movement=0;
 float vertical_displacement=1;
 
+int speed_claw=1;
+int global_speed=0;
+int speed_vertical=0;
+int speed_updown=0;
+
+bool animation_enabled=true;
 bool end_horizontal_movement=false;
 bool end_vertical_movement=false;
 bool end_vertical_displacement=false;

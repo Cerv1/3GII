@@ -26,8 +26,8 @@ void Escena::inicializar(int UI_window_width,int UI_window_height) {
 	Width=UI_window_width/10;
 	Height=UI_window_height/10;
 	glViewport(0,0,UI_window_width,UI_window_height);
-  cube = new Cube();
-  tetrahedron = new Tetrahedron();
+
+
   objectPly = new Ply();
   mecha = new Mechanic();
 
@@ -50,88 +50,98 @@ void Escena::inicializar(int UI_window_width,int UI_window_height) {
 // Funcion que dibuja objetos en la escena
 //***************************************************************************
 void Escena::draw_objects(unsigned char shape) {
-    switch(shape){
-        case '1':
-            mecha->draw(shape,mode,claw_rotation,claw_movement,horizontal_movement, vertical_displacement,vertical_movement);
-            break;
-        case '2':
-            revo->scale();
-            revo->translate();
-            revo->draw(shape,mode);
-            break;
-        case '3':
-            glScalef(250.0f,250.0f,250.0f);
-            tommygun->translate();
-            tommygun->draw(shape,mode);
-            break;
-        case 'C':
-            if(horizontal_movement<295)
-                horizontal_movement+=8;
-            break;
-        case 'c':
-            if(horizontal_movement>-275)
-                horizontal_movement-=8;
-            break;
-        case 'X':
-            if(vertical_displacement<3.8)
-                vertical_displacement+=0.1;
-            break;
-        case 'x':
-            if(vertical_displacement>0.6)
-                vertical_displacement+=-0.1;
-            break;
-        case 'Z':
-            if(claw_movement<10)
-                claw_movement+=3;
-            break;
-        case 'z':
-            if(claw_movement>-38)
-                claw_movement-=3;
-            break;
-        case 'V':
-            claw_rotation+=8;
-            break;
-        case 'v':
-            claw_rotation-=8;
-            break;
-        case 'D':
-            if(vertical_movement<104)
-                vertical_movement+=8;
-            break;
-        case 'd':
-            if(vertical_movement>-430)
-                vertical_movement-=8;
-            break;
-      }
+  switch(shape){
+    case '1':
+      mecha->draw(shape,mode,claw_rotation,claw_movement,horizontal_movement, vertical_displacement,vertical_movement);
+      break;
+    case '2':
+      revo->scale();
+      revo->translate();
+      revo->draw(shape,mode);
+      break;
+    case '3':
+      glScalef(250.0f,250.0f,250.0f);
+      tommygun->translate();
+      tommygun->draw(shape,mode);
+      break;
+    case 'C':
+      if(horizontal_movement<295)
+        horizontal_movement+=8;
+      break;
+    case 'c':
+      if(horizontal_movement>-275)
+        horizontal_movement-=8;
+      break;
+    case 'X':
+      if(vertical_displacement<3.6)
+        vertical_displacement+=0.1;
+      break;
+    case 'x':
+      if(vertical_displacement>1.5)
+        vertical_displacement+=-0.1;
+      break;
+    case 'Z':
+      if(claw_movement<10)
+        claw_movement+=3;
+      break;
+    case 'z':
+      if(claw_movement>-38)
+        claw_movement-=3;
+      break;
+    case 'V':
+      claw_rotation+=8;
+      break;
+    case 'v':
+      claw_rotation-=8;
+      break;
+    case 'D':
+      if(vertical_movement<104)
+        vertical_movement+=8;
+      break;
+    case 'd':
+      if(vertical_movement>-430)
+        vertical_movement-=8;
+      break;
+  }
 }
 
 void Escena::animate(){
+  int control;
+  if(global_speed==0)
+    control=-3;
+  else if(global_speed==1)
+    control=0;
+  else if(global_speed==2)
+    control=3;
+
+
+  if(animation_enabled){
 
     if(horizontal_movement<295 && !end_horizontal_movement){
-        horizontal_movement+=6;
+        horizontal_movement+=(6+control);
         if(horizontal_movement>295) end_horizontal_movement=true;
     }
     else if(horizontal_movement>-275 && end_horizontal_movement){
-        horizontal_movement-=6;
+        horizontal_movement-=(6+control);
         if(horizontal_movement<-275) end_horizontal_movement=false;
     }
 
     if(vertical_movement<104 && !end_vertical_movement){
-        vertical_movement+=6;
+        vertical_movement+=(6+control);
         if(vertical_movement>104) end_vertical_movement=true;
     }
     else if(vertical_movement>-430 && end_vertical_movement){
-        vertical_movement-=6;
+        vertical_movement-=(6+control);
         if(vertical_movement<-430) end_vertical_movement=false;
     }
 
-    if(vertical_displacement<3.8 && !end_vertical_displacement){
+    if(vertical_displacement<3 && !end_vertical_displacement){
         vertical_displacement+=0.1;
-        if(vertical_displacement>3.8) end_vertical_displacement=true;
+        if(vertical_displacement>3) end_vertical_displacement=true;
     }
-    else if(vertical_displacement>0.6 && end_vertical_movement){
+    else if(vertical_displacement>1.7 && end_vertical_movement){
         vertical_displacement-=0.1;
-        if(vertical_displacement<0.6) end_vertical_displacement=false;
+        if(vertical_displacement<1.7) end_vertical_displacement=false;
     }
 
     if(claw_movement<10 && !end_claw_movement){
@@ -142,7 +152,14 @@ void Escena::animate(){
         claw_movement-=3;
         if(claw_movement<-38) end_claw_movement=false;
     }
-    claw_rotation+=5;
+
+    if(speed_claw==0)
+      claw_rotation=0;
+    else if(speed_claw==1)
+      claw_rotation+=10;
+    else if(speed_claw==2)
+      claw_rotation+=50;
+  }
 }
 
 void Escena::dibujar() {
@@ -153,72 +170,38 @@ void Escena::dibujar() {
 }
 
 int Escena::teclaPulsada(unsigned char Tecla1,int x,int y) {
-	if(toupper(Tecla1)=='Q')
-        return 1;
+  if(toupper(Tecla1)=='Q')
+    return 1;
     else if(toupper(Tecla1) == 'S' || toupper(Tecla1) == 'L' || toupper(Tecla1) == 'P' || toupper(Tecla1) == 'A' ){
-        mode=toupper(Tecla1);
-        return 0;
-    }
+      mode=toupper(Tecla1);
+      return 0;
+  }
 
-    if(Tecla1 == '1' || Tecla1 == '2' || Tecla1 == '3'){
-        shape=Tecla1;
-        draw_objects(Tecla1);
-    }
-    else if(Tecla1 == 'Z' || Tecla1 == 'z')
-        draw_objects(Tecla1);
-    else if(Tecla1 == 'X' || Tecla1 == 'x')
-        draw_objects(Tecla1);
-    else if(Tecla1 == 'C' || Tecla1 =='c')
-        draw_objects(Tecla1);
-    else if(Tecla1 == 'V' || Tecla1 == 'v')
-        draw_objects(Tecla1);
-     else if(Tecla1 == 'D' || Tecla1 == 'd')
-        draw_objects(Tecla1);
-    return 0;
+  if(Tecla1 == '1' || Tecla1 == '2' || Tecla1 == '3'){
+    shape=Tecla1;
+    draw_objects(Tecla1);
+  }
 
+  else if(Tecla1 == 'Z' || Tecla1 == 'z')
+    draw_objects(Tecla1);
+  else if(Tecla1 == 'X' || Tecla1 == 'x')
+    draw_objects(Tecla1);
+  else if(Tecla1 == 'C' || Tecla1 =='c')
+    draw_objects(Tecla1);
+  else if(Tecla1 == 'V' || Tecla1 == 'v')
+    draw_objects(Tecla1);
+  else if(Tecla1 == 'D' || Tecla1 == 'd')
+    draw_objects(Tecla1);
+  else if(Tecla1 == 'b')
+    speed_claw=(speed_claw+1)%3;
+  else if(Tecla1 == 'n')
+    global_speed=(global_speed+1)%3;
+  else if(Tecla1 == '-')
+    (animation_enabled) ? animation_enabled=false : animation_enabled=true;
+
+  return 0;
 }
-    //   if(toupper(Tecla1)=='U'){
-    //     string name;
-    //     cout << "Ingrese el nombre del objeto ply: ";
-    //     cin >> name;
-    //     char * file = new char[name.length()+1];
-    //     strcpy (file, name.c_str());
-    //     objectPly->readPLY(file);
-    //   }
-    //   else if(toupper(Tecla1)=='O'){
-    //     string name;
-    //     cout << "Ingrese el nombre del objeto de revlucion ply: ";
-    //     cin >> name;
-    //     char * file = new char[name.length()+1];
-    //     strcpy (file, name.c_str());
-    //     revoPly = new RevolutionObject(file);
-    //   }
-    //   else if(Tecla1=='+'){
-    //     draw_objects(Tecla1);
-    //     return 0;
-    //   }
-    //   else if(Tecla1=='-'){
-    //     draw_objects(Tecla1);
-    //     return 0;
-    //   }
-    //   else if(Tecla1==1){
-    //     if(tieneTapaSup)
-    //       return 0;
-    //     else
-    //       tieneTapaSup=true;
-    //   }
-    //   else if(Tecla1==2){
-    //     if(tieneTapaInf)
-    //       return 0;
-    //     else
-    //       tieneTapaInf=true;
-    //   }
-    //   shape=toupper(Tecla1);
-    //   draw_objects(shape);
-    //   return 0;
-    // else
-    //     return 0;
-// }
+
 
 void Escena::teclaEspecial(int Tecla1,int x,int y) {
 switch (Tecla1){

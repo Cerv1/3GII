@@ -2,7 +2,6 @@
 #define _MECHANIC_H
 
 #include "Ply.h"
-#include "Cube.h"
 #include "RevolutionObject.h"
 #include <vector>
 #include <cmath>
@@ -12,12 +11,13 @@
 #include <GL/glut.h>
 
 
-class Mechanic : public Object3d{
+class Mechanic{
   private:
-    RevolutionObject *cube;
-    RevolutionObject *sphere;
     RevolutionObject *base;
     Ply *maquina;
+    Ply *rat;
+    Ply *cow;
+    Ply *big_porsche;
   public:
     Mechanic();
     void draw(unsigned char shape, unsigned char mode, int pos_via,int pos_grip, int desp, float ver,int vertical_displacement);

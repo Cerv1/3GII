@@ -2,7 +2,7 @@
 
 * [Informática Gráfica](/IG)
 * [Ingeniería de Servidores](/ISE)
-* [Fundamentos de Redes](/FR/P2)
+* [Fundamentos de Redes](/FR/PR2)
 
 
 Author: Sergio Cervilla Ortega

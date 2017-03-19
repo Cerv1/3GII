@@ -1,0 +1,27 @@
+Autor: Sergio Cervilla Ortega  DNI: 14275233F
+Grupo: C(3)
+
+Para ejecutar: Escribir la orden make y despues ./practica3
+
+Objetos predefinidos para visualizar:
+    _1_: Modelo jerárquico
+    _2_: Objeto de Revolucion
+    _3_: Objeto ply
+
+Modos de visualizacion:
+    _L_: Modo lineas
+    _S_: Modo solido
+    _P_: Modo puntos
+    _A_: Modo ajedrez
+
+Controles para el objeto jerárquico:
+    _-_: Activar/Desactivar animación
+    -> Animación activada:
+      _n_: Aumentar/Disminuir velocidad global
+      _b_: Aumentar/Disminuir velocidad de rotación del gancho
+    -> Animación desactivada:
+      _c/C_: Desplazamiento izquierda/derecha.
+      _d/D_: Desplazamiento delante/atrás.
+      _z/Z_: Abrir/Cerrar garras
+      _x/X_: Bajar/Subir gancho
+      __v__: Rotación del gancho

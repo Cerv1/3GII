@@ -1,0 +1,44 @@
+\documentclass[]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+%opening
+\title{Memoria del proyecto de Lex: validador léxico de URLs}
+\author{Sergio Cervilla Ortega \\ Adrián Morente Gabaldón}
+
+\begin{document}
+
+\maketitle
+
+\section{Descripción de la funcionalidad del proyecto}
+  Nuestra idea de proyecto está orientada a una funcionalidad muy perseguida por muchos usuarios del mundo de Internet, y es \textbf{la capacidad de analizar y validar URLs de direcciones web e IP de la forma más correcta posible}. \\
+  Es decir, perseguiremos la idea de validar todas las URLs leídas a partir de un fichero, verificando si cumplen las convenciones establecidas y podrían ser visitadas en un navegador. \\
+  
+  Además, para completar, tendremos un archivo de prueba en el que incluiremos direcciones erróneas o no válidas para comprobar que nuestro analizador no las permite. Para esto último, veremos que en algunos casos no nos ha sido posible evitar algunas de las direcciones no válidas; como ya comentamos al profesor. 
+  
+  \vspace{6mm} 
+  
+  Debemos remarcar que el fichero generado \textbf{lex.yy.c} es de un tamaño bastante grande para ser un fichero de código, debido al volumen del análisis de nuestras reglas (aproximadamente unos 22.5 MiB). Por tanto, la compilación de nuestra práctica puede llevar unos segundos de más.
+
+\section{Explicación de las reglas de Lex}
+  En nuestro caso, utilizaremos pocas reglas de \emph{Lex} pero muy consistentes en cuanto a análisis léxico, gracias a los \emph{alias} utilizados que comentaremos ahora; y realizaremos en \emph{C} el conteo de URLs válidas.
+  
+  \subsection{Alias usados para el chequeo de fragmentos de URL}
+  Por la extensión de algunos de estos, aquí nos limitaremos a explicar el uso de cada alias sin añadir su código completo, que vendrá adjunto en el fichero \emph{plantilla.URLs.l}.
+  \begin{itemize}
+  	\item \textbf{range\_ip}: Como sabemos, una dirección IP está compuesta de 4 números (comprendidos en el rango [0-255]) separados por un punto. Con este alias, comprobamos que el número aceptado cumple esta primitiva. En nuestro caso, se cumple bien.
+  	\item \textbf{range\_port}: Como sabemos, el número identificador de un puerto está comprendido en el rango [0-65535], viniendo siempre precedido por el símbolo \textbf{:}. En nuestro caso, esta primitiva se cumple bien en todo caso.
+  	\item \textbf{protocolo}: Los protocolos que pueden utilizarse (al menos los que nos limitaremos a reconocer) para servir una página web son \emph{HTTP}, \emph{HTTPS} y \emph{FTP}; y vendrán siempre seguidos de la secuencia de caracteres \textbf{://}. Esta parte está siempre controlada en nuestro analizador.
+  	\item \textbf{cabecera\_web}: Lo que consideramos como ``cabecera'' será la típica introducción \emph{www}, pudiendo estar seguida de un \emph{8} como vemos en algunas páginas de comercio (la de Hewlett Packard, por ejemplo). Veremos que dicha cabecera puede existir o no en una URL; y vendrá seguida de un punto.
+  	\item \textbf{ip}: En base a los rangos de IP y de puertos definidos antes, ahora generaremos al completo la dirección IP, de la forma \emph{IP:puerto/}. Esta regla está bien controlada en nuestro caso práctico.
+  	\item \textbf{body\_url}: Lo que consideramos como cuerpo de la URL será la secuencia de caracteres alfanuméricos que sucede a la cabecera. En este punto encontramos algunos problemas, que ya comentamos en clase con el profesor, y es en casos concretos como controlar que en mitad de dicha dirección no aparece un punto seguido de un guión. En nuestro caso, controlamos bien que caracteres de este tipo no aparecen al inicio de dicho cuerpo.
+  	\item \textbf{end\_url}: La terminación de la URL se trata de la extensión de esta, como las conocidas \emph{.es, .com, .net}, etc. Sucede al cuerpo, estará formada por letras minúsculas y puntos y tendrán entre 2 y 30 caracteres como máximo.
+  	\item \textbf{directory}: Como sabemos, al acceder a un servidor tenemos una ruta de acceso, que al fin y al cabo es un directorio en el que se van almacenando los distintos servicios de la web que estamos visitando. Estos directorios aparecerán tras la terminación de la URL y un símbolo \textbf{/}. Puede haberlos o no, y en nuestro caso están bien controlados.
+  	\item \textbf{port\_url}: En lugar de un directorio, al colocar una dirección URL o IP, podemos sucederlo con el valor del puerto desde el que se ofrece el servicio, en la forma \emph{:puerto}. El rango numérico de dicho puerto lo definimos arriba.
+  \end{itemize}
+
+  \subsection{Reglas usadas para la validación de los enlaces}
+  Como comentamos arriba, nuestro caso práctico es realizado con pocas reglas pero muy consistentes, gracias al alto uso de alias. Sin embargo, dada la claridad de estas reglas, no las comentaremos una a una; ya que muchas de ellas comparten un comportamiento muy similar cambiando una mínima parte, como puede ser obligar a incluir una parte y prescindir de otra. Por ejemplo, en la primera regla se exige un directorio pudiendo prescindir del puerto, y en la segunda se prescinde del directorio y se requiere de un puerto. \\
+  Además, tendremos una regla que permitirá que una dirección conste simplemente del protocolo y la dirección IP, con sus consiguientes separadores.
+
+\end{document}
